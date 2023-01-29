@@ -15,6 +15,10 @@ body {
   box-sizing: border-box;
 }
 
+/*
+ * skip content
+ */
+
 .skip-link {
   position: absolute;
   top: -40px;
@@ -29,6 +33,10 @@ body {
   position: relative;
   top: 0;
 }
+
+/*
+ * Navigation
+ */
 
 .top-nav {
   display: flex;
