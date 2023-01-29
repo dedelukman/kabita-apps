@@ -141,3 +141,23 @@ body {
     border-bottom: 1px solid #444;
   }
 }
+
+/*
+ * footer
+ */
+
+footer {
+  background: linear-gradient(to left, #f46b45, #eea849);
+  padding: 1em;
+  width: 100%;
+  text-align: center;
+}
+
+footer p {
+  margin: 0 auto;
+  display: inline-block;
+  font-size: 17px;
+  padding: 0.3em;
+  text-decoration: none;
+  color: #fff;
+}
