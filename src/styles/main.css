@@ -165,12 +165,6 @@ body {
   }
 }
 
-@media screen and (min-width: 1200px) {
-  .menu > li {
-    padding: 3em;
-  }
-}
-
 /*
  * Jumbotron
  */
@@ -178,7 +172,7 @@ body {
 .hero {
   display: flex;
   align-items: center;
-  min-height: 380px;
+  min-height: 480px;
   width: 100%;
   text-align: center;
   background-image: url('../public/images/heros/hero-image_2.jpg');
