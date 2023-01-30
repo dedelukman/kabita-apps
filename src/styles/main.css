@@ -187,6 +187,7 @@ body {
 
 .hero__title {
   color: #fff;
+  text-shadow: 2px 2px #8f8f8f;
   font-weight: 500;
   font-size: 36px;
 }
@@ -196,6 +197,7 @@ body {
   margin-top: 16px;
   font-size: 18px;
   font-weight: 300;
+  text-shadow: 2px 2px #7c7c7c;
 }
 
 @media screen and (min-width: 1200px) {
