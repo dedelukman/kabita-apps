@@ -207,6 +207,153 @@ body {
 }
 
 /*
+ * main
+ */
+
+main {
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 1200px) {
+  main {
+    max-width: 1200px;
+  }
+}
+/*
+ * content
+ */
+
+.content {
+  padding: 32px;
+}
+
+/*
+ * restaurant_list
+ */
+
+.restaurant_list {
+  width: 100%;
+  margin: 10px auto;
+  text-align: center;
+}
+
+.restaurant_list__label {
+  font-size: 32px;
+  font-weight: lighter;
+}
+
+.restaurant_list__label::after {
+  content: '';
+  margin-top: 16px;
+  display: block;
+  border-bottom: 1px solid #eeeeee;
+}
+
+/*
+ * post
+ */
+
+.restaurants {
+  margin: 32px auto auto;
+  text-align: left;
+}
+
+/*
+ * post item
+ */
+
+.restaurant-item {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.restaurant-item__content {
+  padding: 16px;
+}
+
+.restaurant-item__image {
+  position: relative;
+  text-align: center;
+}
+
+.restaurant-item__city {
+  padding: 12px;
+  background-color: white;
+  position: absolute;
+  top: 12px;
+}
+
+.restaurant-item__thumbnail {
+  width: 100%;
+}
+
+.restaurant-item__rating {
+  text-transform: uppercase;
+  color: orange;
+  text-decoration: none;
+}
+
+.restaurant-item__title {
+  font-weight: 500;
+  font-size: 18px;
+  margin-top: 16px;
+  transition: 0.3s opacity;
+}
+
+.restaurant-item__title:hover {
+  opacity: 0.5;
+}
+
+.restaurant-item__title a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.restaurant-item__description {
+  margin-top: 16px;
+  font-size: 14px;
+  line-height: 1.5em;
+}
+
+.restaurants {
+  display: grid;
+  grid-row-gap: 16px;
+}
+
+@media screen and (min-width: 650px) {
+  .restaurant-item__content {
+    padding: 16px 32px 32px 32px;
+  }
+
+  .restaurant-item__title {
+    font-size: 18px;
+  }
+
+  .restaurant-item__description {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .restaurants {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 16px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .restaurants {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+/*
  * footer
  */
 
