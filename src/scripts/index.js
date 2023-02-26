@@ -2,19 +2,18 @@ import 'regenerator-runtime'; /* for async await transpile */
 import '../styles/main.css';
 import '../styles/responsive.css';
 import './components/restaurant-list';
-import DataSource from '../DATA.json';
+import App from './views/app';
 
-const restaurantListElement = document.querySelector('restaurant-list');
-const menu = document.querySelector('#hamburgerButton');
-const drawer = document.querySelector('#navigationDrawer');
-
-menu.addEventListener('click', (event) => {
-  drawer.classList.toggle('open');
-  event.stopPropagation();
+const app = new App({
+  button: document.querySelector('#hamburgerButton'),
+  drawer: document.querySelector('#navigationDrawer'),
+  content: document.querySelector('#maincontent'),
 });
 
-const getRestaurantList = () => {
-  restaurantListElement.items = DataSource.restaurants;
-};
+window.addEventListener('hashchange', () => {
+  app.renderPage();
+});
 
-getRestaurantList();
+window.addEventListener('load', () => {
+  app.renderPage();
+});
