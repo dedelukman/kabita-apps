@@ -61,7 +61,7 @@
   }
 
   .restaurant-item__content {
-    padding: 16px 32px 32px 32px;
+    padding: 16px 32px 32px 16px;
   }
 
   .restaurant-item__title {

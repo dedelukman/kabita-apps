@@ -61,8 +61,8 @@ body {
 .app-bar .app-bar__menu button {
   background-color: transparent;
   border: none;
-  font-size: 30px;
-  padding: 0.1em;
+  font-size: 25px;
+  padding: 0.3em;
   cursor: pointer;
   font-weight: bold;
   color: #fff;
@@ -77,12 +77,11 @@ body {
   color: #fff;
   font-size: 22px;
   user-select: none;
-  padding: 0.5em;
 }
 
 .app-bar .app-bar__navigation {
   position: absolute;
-  top: 90px;
+  top: 70px;
   left: -100%;
   width: 100%;
   transition: all 0.3s;
@@ -197,7 +196,7 @@ main {
 }
 
 .restaurant-item__content {
-  padding: 16px;
+  padding: 16px 32px 32px 16px;
 }
 
 .restaurant-item__image {
@@ -206,7 +205,7 @@ main {
 }
 
 .restaurant-item__city {
-  padding: 12px;
+  padding: 0.8em;
   background-color: black;
   color: white;
   position: absolute;
@@ -220,12 +219,13 @@ main {
 .restaurant-item__rating {
   text-transform: uppercase;
   color: rgb(185, 120, 0);
+  padding-left: 0.8em;
+  margin: 0;
 }
 
 .restaurant-item__title {
   font-weight: 500;
   font-size: 18px;
-  margin-top: 16px;
   transition: 0.3s opacity;
 }
 
@@ -236,12 +236,13 @@ main {
 .restaurant-item__title a {
   text-decoration: none;
   color: inherit;
+  padding: 0.8em;
 }
 
 .restaurant-item__description {
-  margin-top: 16px;
   font-size: 14px;
   line-height: 1.5em;
+  padding-left: 0.8em;
 }
 
 .restaurants {
