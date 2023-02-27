@@ -10,8 +10,7 @@ const createRestoDetailTemplate = (resto) => `
       resto.pictureId
         ? CONFIG.BASE_IMAGE_SMALL_URL + resto.pictureId
         : 'https://picsum.photos/id/666/800/450?grayscale'
-    }">
-    alt="${resto.name}"
+    }" alt="${resto.name}"
   />
   <div class="restaurant-item__city">Kota. ${resto.city}</div>
 </div>
@@ -37,8 +36,7 @@ const createRestoItemTemplate = (resto) => `
       resto.pictureId
         ? CONFIG.BASE_IMAGE_SMALL_URL + resto.pictureId
         : 'https://picsum.photos/id/666/800/450?grayscale'
-    }">
-    alt="${resto.name}"
+    }" alt="${resto.name}"
   />
   <div class="restaurant-item__city">Kota. ${resto.city}</div>
 </div>
