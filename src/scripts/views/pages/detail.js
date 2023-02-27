@@ -7,8 +7,8 @@ const Detail = {
     return `
     <section class="content">
   <div class="restaurant_list">
-    <h1 class="restaurant_list__label">Explore Restaurant</h1>
-    <div id="restaurants" class="restaurants"></div>
+    <h1 class="restaurant_list__label">Detail Restaurant</h1>
+    <div id="restaurant" class="restaurant"></div>
   </div>
 </section>
       `;
@@ -18,7 +18,7 @@ const Detail = {
     const url = UrlParser.parseActiveUrlWithoutCombiner();
     const resto = await DicodingRestaurantDbSource.detail(url.id);
     console.log(resto);
-    const restoContainer = document.querySelector('#restaurants');
+    const restoContainer = document.querySelector('#restaurant');
     restoContainer.innerHTML = createRestoDetailTemplate(resto.restaurant);
   },
 };

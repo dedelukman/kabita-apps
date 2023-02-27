@@ -19,6 +19,15 @@
   .app-bar .app-bar__navigation ul li > a {
     justify-content: center;
   }
+
+  .restaurant .restaurant__poster {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .restaurant .restaurant__info h4 {
+    margin: 8px 0;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -75,6 +84,12 @@
 
 @media screen and (min-width: 700px) {
   .restaurants {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 16px;
+  }
+  .restaurant {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 10px;
