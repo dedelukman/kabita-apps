@@ -1,3 +1,5 @@
+/* eslint-disable implicit-arrow-linebreak */
+/* eslint-disable comma-dangle */
 /* eslint-disable indent */
 import CONFIG from '../../globals/config';
 
@@ -9,14 +11,25 @@ const createRestoDetailTemplate = (resto) => `
   <h3>Information</h3>
   <h4>Name</h4>
   <p>${resto.name}</p>
+  <h4>Address</h4>
+  <p>${resto.address}</p>
   <h4>City</h4>
   <p>${resto.city}</p>
-  <h4>Rating</h4>
-  <p>${resto.rating}</p>
+  <h4>Foods</h4>
+  <p>${resto.menus.foods.map((food) => food.name)}</p>
+  <h4>Drinks</h4>
+  <p>${resto.menus.drinks.map((drink) => drink.name)}</p>
 </div>
 <div class="restaurant__overview">
-  <h3>Overview</h3>
+  <h3>Description</h3>
   <p>${resto.description}</p>
+</div>
+<div class="restaurant__overview">
+  <h3>Customer Reviews</h3>
+  <p>${resto.customerReviews.map(
+    (review) =>
+      `<p><b>${review.name}</b></p><p style="margin-top: -10px;"><small>${review.date}</small></p><p>${review.review}</p>`
+  )}</p>
 </div>
 `;
 

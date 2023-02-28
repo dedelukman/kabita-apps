@@ -21,7 +21,7 @@ const Detail = {
     const resto = await DicodingRestaurantDbSource.detail(url.id);
     const restoContainer = document.querySelector('#restaurant');
     restoContainer.innerHTML = createRestoDetailTemplate(resto.restaurant);
-    console.log(resto.restaurant.city);
+    console.log(resto.restaurant.menus.foods[0].name);
     LikeButtonInitiator.init({
       likeButtonContainer: document.querySelector('#likeButtonContainer'),
       resto: {

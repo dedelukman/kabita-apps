@@ -247,15 +247,6 @@ body {
     restaurant
 */
 
-.restaurant {
-  margin: 0 auto;
-  width: 100%;
-  max-width: 800px;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 18px 16px;
-}
-
 /*
   Like
 */
