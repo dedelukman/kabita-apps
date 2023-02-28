@@ -6,7 +6,7 @@ import CONFIG from '../../globals/config';
 const createRestoDetailTemplate = (resto) => `
 <img class="restaurant__poster" src="${
   CONFIG.BASE_IMAGE_MEDIUM_URL + resto.pictureId
-}" alt="${resto.title}" />
+}" alt="${resto.name}" />
 <div class="restaurant__info">
   <h3>Information</h3>
   <h4>Name</h4>
