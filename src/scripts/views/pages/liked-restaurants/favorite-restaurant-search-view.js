@@ -23,14 +23,14 @@ class FavoriteRestaurantSearchView {
     });
   }
 
-  showRestos(restaurants) {
+  showRestos(restos) {
     let html;
-    if (restaurants.length > 0) {
-      html = restaurants.reduce(
-        (carry, restaurant) =>
+    if (restos.length > 0) {
+      html = restos.reduce(
+        (carry, resto) =>
           carry.concat(
             `<li class="restaurant"><span class="restaurant__name">${
-              restaurant.name || '-'
+              resto.name || '-'
             }</span></li>`
           ),
         ''

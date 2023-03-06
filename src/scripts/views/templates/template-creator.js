@@ -34,7 +34,7 @@ const createRestoDetailTemplate = (resto) => `
 `;
 
 const createRestoItemTemplate = (resto) => `
-<article class="restaurant-item">
+<article class="restaurant restaurant-item">
 <div class="restaurant-item__image">
   <img
     class="restaurant-item__thumbnail"
@@ -42,18 +42,18 @@ const createRestoItemTemplate = (resto) => `
       resto.pictureId
         ? CONFIG.BASE_IMAGE_SMALL_URL + resto.pictureId
         : 'https://picsum.photos/id/666/800/450?grayscale'
-    }" alt="${resto.name}"
+    }" alt="${resto.name || '-'}"
   />
-  <div class="restaurant-item__city">Kota. ${resto.city}</div>
+  <div class="restaurant-item__city">Kota. ${resto.city || '-'}</div>
 </div>
 
 <div class="restaurant-item__content">
-  <p class="restaurant-item__rating">⭐️ Rating: ${resto.rating}</p>
+  <p class="restaurant-item__rating">⭐️ Rating: ${resto.rating || '-'}</p>
   <h1 class="restaurant-item__title">
-  <a href="/#/detail/${resto.id}">${resto.name}</a>
+  <a href="/#/detail/${resto.id}">${resto.name || '-'}</a>
   </h1>
   <p class="restaurant-item__description">
-  ${resto.description}.
+  ${resto.description || '-'}.
   </p>
 </div>
 </article>
