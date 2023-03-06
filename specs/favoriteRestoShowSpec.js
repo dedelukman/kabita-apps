@@ -59,15 +59,15 @@ describe('Showing all favorite restaurants', () => {
       favoriteRestos.getAllRestos.and.returnValues([
         {
           id: 11,
-          title: 'A',
-          vote_average: 3,
-          overview: 'Sebuah film A',
+          name: 'A',
+          rating: 3,
+          description: 'Sebuah film A',
         },
         {
           id: 22,
-          title: 'B',
-          vote_average: 4,
-          overview: 'Sebuah film B',
+          name: 'B',
+          rating: 4,
+          description: 'Sebuah film B',
         },
       ]);
       new FavoriteRestoShowPresenter({
