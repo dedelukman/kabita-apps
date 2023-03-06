@@ -132,7 +132,7 @@ describe('Searching restaurants', () => {
         .getElementById('restaurant-search-container')
         .addEventListener('restaurants:searched:updated', () => {
           expect(
-            document.querySelectorAll('.restaurants__not__found').length
+            document.querySelectorAll('.restaurant-item__not__found').length
           ).toEqual(1);
           done();
         });

@@ -63,7 +63,7 @@ class FavoriteRestaurantSearchView {
   }
 
   _getEmptyRestoTemplate() {
-    return '<div class="restaurants__not__found restaurant-item__not__found">Tidak ada Restaurant untuk di tampilkan</div>';
+    return '<div class="restaurant-item__not__found">Tidak ada Restaurant untuk di tampilkan</div>';
   }
 }
 
