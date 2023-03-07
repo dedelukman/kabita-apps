@@ -45,7 +45,7 @@ describe('Searching restaurants', () => {
       expect(favoriteRestos.searchRestos).toHaveBeenCalledWith('restaurant a');
     });
 
-    it('should show - when the restaurant returned does not contain a title', (done) => {
+    it('should show - when the restaurant returned does not contain a name', (done) => {
       document
         .getElementById('restaurant-search-container')
         .addEventListener('restaurants:searched:updated', () => {

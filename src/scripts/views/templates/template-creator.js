@@ -49,7 +49,7 @@ const createRestoItemTemplate = (resto) => `
 
 <div class="restaurant-item__content">
   <p class="restaurant-item__rating">⭐️ Rating: ${resto.rating || '-'}</p>
-  <h1 class="restaurant-item__title">
+  <h1 class="restaurant__name">
   <a href="/#/detail/${resto.id || '-'}">${resto.name || '-'}</a>
   </h1>
   <p class="restaurant-item__description">
