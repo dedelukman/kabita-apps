@@ -9,7 +9,7 @@ const createRestoDetailTemplate = (resto) => `
 }" alt="${resto.name}" />
 <div class="restaurant__info">
   <h3>Information</h3>
-  <h4>Name</h4>
+  <h4 class="restaurant__name">Name</h4>
   <p>${resto.name}</p>
   <h4>Address</h4>
   <p>${resto.address}</p>

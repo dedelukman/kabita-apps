@@ -1,23 +1,20 @@
 import FavoriteRestoIdb from '../../data/favorite-restaurant-idb';
-import { createRestoItemTemplate } from '../templates/template-creator';
+import FavoriteRestaurantSearchView from './liked-restaurants/favorite-restaurant-search-view';
+import FavoriteRestoShowPresenter from './liked-restaurants/favorite-restaurant-show-presenter';
+import FavoriteRestoSearchPresenter from './liked-restaurants/favorite-restaurant-search-presenter';
+
+const view = new FavoriteRestaurantSearchView();
 
 const Favorite = {
   async render() {
-    return `
-    <section class="content">
-    <div class="restaurant_list">
-      <h1 class="restaurant_list__label">Favorite Restaurant</h1>
-      <div id="restaurants" class="restaurants"></div>
-    </div>
-  </section>
-        `;
+    return view.getTemplate();
   },
 
   async afterRender() {
-    const restos = await FavoriteRestoIdb.getAllRestos();
-    const restosContainer = document.querySelector('#restaurants');
-    restos.forEach((resto) => {
-      restosContainer.innerHTML += createRestoItemTemplate(resto);
+    new FavoriteRestoShowPresenter({ view, favoriteRestos: FavoriteRestoIdb });
+    new FavoriteRestoSearchPresenter({
+      view,
+      favoriteRestos: FavoriteRestoIdb,
     });
   },
 };
