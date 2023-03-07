@@ -50,7 +50,7 @@ describe('Searching restaurants', () => {
         .getElementById('restaurant-search-container')
         .addEventListener('restaurants:searched:updated', () => {
           const restoNames = document.querySelectorAll('.restaurant__name');
-          expect(restoNames.item(0).textContent).toEqual('-');
+          expect(restoNames.item(0).textContent.trim()).toEqual('-');
 
           done();
         });
@@ -84,11 +84,13 @@ describe('Searching restaurants', () => {
         .getElementById('restaurant-search-container')
         .addEventListener('restaurants:searched:updated', () => {
           const restoNames = document.querySelectorAll('.restaurant__name');
-          expect(restoNames.item(0).textContent).toEqual('restaurant abc');
-          expect(restoNames.item(1).textContent).toEqual(
+          expect(restoNames.item(0).textContent.trim()).toEqual(
+            'restaurant abc'
+          );
+          expect(restoNames.item(1).textContent.trim()).toEqual(
             'ada juga restaurant abcde'
           );
-          expect(restoNames.item(2).textContent).toEqual(
+          expect(restoNames.item(2).textContent.trim()).toEqual(
             'ini juga boleh restaurant a'
           );
 

@@ -27,12 +27,7 @@ class FavoriteRestaurantSearchView {
     let html;
     if (restos.length > 0) {
       html = restos.reduce(
-        (carry, resto) =>
-          carry.concat(
-            `<li class="restaurant"><span class="restaurant__name">${
-              resto.name || '-'
-            }</span></li>`
-          ),
+        (carry, resto) => carry.concat(createRestoItemTemplate(resto)),
         ''
       );
     } else {
