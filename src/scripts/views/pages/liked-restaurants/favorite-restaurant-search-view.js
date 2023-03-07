@@ -23,24 +23,6 @@ class FavoriteRestaurantSearchView {
     });
   }
 
-  showRestos(restos) {
-    let html;
-    if (restos.length > 0) {
-      html = restos.reduce(
-        (carry, resto) => carry.concat(createRestoItemTemplate(resto)),
-        ''
-      );
-    } else {
-      html = this._getEmptyRestoTemplate();
-    }
-
-    document.querySelector('.restaurants').innerHTML = html;
-
-    document
-      .getElementById('restaurants')
-      .dispatchEvent(new Event('restaurants:updated'));
-  }
-
   showFavoriteRestos(restos = []) {
     let html;
     if (restos.length) {
