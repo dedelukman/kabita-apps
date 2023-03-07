@@ -34,7 +34,7 @@ const createRestoDetailTemplate = (resto) => `
 `;
 
 const createRestoItemTemplate = (resto) => `
-<article class="restaurant restaurant-item">
+<article class="restaurant-item">
 <div class="restaurant-item__image">
   <img
     class="restaurant-item__thumbnail"

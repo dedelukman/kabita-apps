@@ -66,7 +66,9 @@ describe('Searching restaurants', () => {
       document
         .getElementById('restaurant-search-container')
         .addEventListener('restaurants:searched:updated', () => {
-          expect(document.querySelectorAll('.restaurant').length).toEqual(3);
+          expect(document.querySelectorAll('.restaurant-item').length).toEqual(
+            3
+          );
           done();
         });
 
@@ -148,7 +150,9 @@ describe('Searching restaurants', () => {
       document
         .getElementById('restaurant-search-container')
         .addEventListener('restaurants:searched:updated', () => {
-          expect(document.querySelectorAll('.restaurant').length).toEqual(0);
+          expect(document.querySelectorAll('.restaurant-item').length).toEqual(
+            0
+          );
           done();
         });
       favoriteRestos.searchRestos.withArgs('restaurant a').and.returnValues([]);
