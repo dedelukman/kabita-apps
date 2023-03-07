@@ -8,11 +8,9 @@ class FavoriteRestaurantSearchView {
     return `        
         <div class="content">
           <input id="query" type="text">
-          <h2 class="content__heading">Your Liked Restaurant</h2>
-          <div id="restaurant-search-container">
+          <h2 class="content__heading">Your Liked Restaurant</h2>         
             <div id="restaurants" class="restaurants">
-            </div>
-          </div>
+            </div>         
         </div>
       `;
   }
