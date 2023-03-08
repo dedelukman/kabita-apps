@@ -216,17 +216,17 @@ body {
   margin: 0;
 }
 
-.restaurant-item__title {
+.restaurant__name {
   font-weight: 500;
   font-size: 18px;
   transition: 0.3s opacity;
 }
 
-.restaurant-item__title:hover {
+.restaurant__name:hover {
   opacity: 0.5;
 }
 
-.restaurant-item__title a {
+.restaurant__name a {
   text-decoration: none;
   color: inherit;
   padding: 0.8em;
@@ -267,6 +267,10 @@ body {
   font-size: 18px;
   color: white;
   cursor: pointer;
+}
+
+#query {
+  padding: 0.9em;
 }
 
 /*

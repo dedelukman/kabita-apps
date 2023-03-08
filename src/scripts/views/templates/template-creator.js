@@ -4,7 +4,7 @@
 import CONFIG from '../../globals/config';
 
 const createRestoDetailTemplate = (resto) => `
-<img class="restaurant__poster" src="${
+<img class="restaurant__poster lazyload" src="${
   CONFIG.BASE_IMAGE_MEDIUM_URL + resto.pictureId
 }" alt="${resto.name}" />
 <div class="restaurant__info">
@@ -37,7 +37,7 @@ const createRestoItemTemplate = (resto) => `
 <article class="restaurant-item">
 <div class="restaurant-item__image">
   <img
-    class="restaurant-item__thumbnail"
+    class="restaurant-item__thumbnail lazyload"
     src="${
       resto.pictureId
         ? CONFIG.BASE_IMAGE_SMALL_URL + resto.pictureId
