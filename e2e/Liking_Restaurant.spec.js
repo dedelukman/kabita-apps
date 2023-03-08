@@ -1,5 +1,3 @@
-/* eslint-disable no-await-in-loop */
-/* eslint-disable no-plusplus */
 /* eslint-disable comma-dangle */
 const assert = require('assert');
 
@@ -50,7 +48,6 @@ Scenario('searching restaurants', async ({ I }) => {
   I.amOnPage('/');
 
   I.seeElement('.restaurant__name a');
-
   const names = [];
 
   for (let i = 1; i <= 3; i++) {
@@ -64,23 +61,23 @@ Scenario('searching restaurants', async ({ I }) => {
   I.amOnPage('/#/favorite');
   I.seeElement('#query');
 
-  // const searchQuery = names[1].substring(1, 3);
-  // const matchingRestos = names.filter(
-  //   (name) => name.indexOf(searchQuery) !== -1
-  // );
+  const searchQuery = names[1].substring(1, 3);
+  const matchingRestos = names.filter(
+    (name) => name.indexOf(searchQuery) !== -1
+  );
 
-  // I.fillField('#query', searchQuery);
-  // I.pressKey('Enter');
+  I.fillField('#query', searchQuery);
+  I.pressKey('Enter');
 
-  // const visibleLikedRestos = await I.grabNumberOfVisibleElements(
-  //   '.restaurant-item'
-  // );
-  // assert.strictEqual(matchingRestos.length, visibleLikedRestos);
+  const visibleLikedRestos = await I.grabNumberOfVisibleElements(
+    '.restaurant-item'
+  );
+  assert.strictEqual(matchingRestos.length, visibleLikedRestos);
 
-  // matchingRestos.forEach(async (name, index) => {
-  //   const visibleName = await I.grabTextFrom(
-  //     locate('.restaurant__name').at(index + 1)
-  //   );
-  //   assert.strictEqual(name, visibleName);
-  // });
+  matchingRestos.forEach(async (name, index) => {
+    const visibleName = await I.grabTextFrom(
+      locate('.restaurant__name').at(index + 1)
+    );
+    assert.strictEqual(name, visibleName);
+  });
 });
